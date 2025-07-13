@@ -43,8 +43,12 @@ const About = () => (
           
           <div className="animate-scale-in">
             <div className="relative">
-              <div className="w-80 h-80 mx-auto bg-gradient-to-br from-blue-400 via-purple-500 to-pink-500 rounded-full flex items-center justify-center shadow-2xl">
-                <div className="text-8xl">👨‍💻</div>
+              <div className="w-80 h-80 mx-auto bg-gradient-to-br from-blue-400 via-purple-500 to-pink-500 rounded-full flex items-center justify-center shadow-2xl overflow-hidden">
+                <img 
+                  src="https://media.licdn.com/dms/image/v2/D4D03AQFi1kRrP1nscg/profile-displayphoto-shrink_800_800/B4DZavEKDQG8Ac-/0/1746693825646?e=1758153600&v=beta&t=EndPGq8roG_oyPI6vJeiO9vxWPiX2zrwF6n0Xan0ZW0"
+                  alt="Alican Koçman"
+                  className="w-full h-full object-cover rounded-full"
+                />
               </div>
               
               {/* Floating elements around the avatar */}
