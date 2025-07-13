@@ -15,7 +15,7 @@ const About = () => (
           <div className="animate-slide-in-left">
             <div className="space-y-6">
               <p className="text-xl md:text-2xl text-gray-700 dark:text-gray-300 leading-relaxed font-medium">
-                Merhaba! Ben Alican, İstanbul'da yaşayan bir frontend geliştiricisiyim. 
+                Merhaba! Ben Alican, İstanbul&apos;da yaşayan bir frontend geliştiricisiyim. 
                 React ve modern web teknolojileriyle kullanıcı dostu arayüzler geliştiriyorum.
               </p>
               <p className="text-lg text-gray-600 dark:text-gray-400 leading-relaxed">
