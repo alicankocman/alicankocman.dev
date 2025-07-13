@@ -2,31 +2,49 @@ import React from "react";
 
 const experiences = [
   {
-    title: "Frontend Developer",
-    company: "ABC Teknoloji",
-    period: "2022 - Günümüz",
-    description: "React ve Next.js ile modern web uygulamaları geliştiriyorum. Kullanıcı deneyimi odaklı arayüzler tasarlıyorum.",
+    title: "Junior Web Developer",
+    company: "Mersin University",
+    period: "Haz 2021 - Eyl 2021",
+    description: "Mersin Yenişehir'de 4 ay stajyer olarak çalıştım. Web geliştirme ve programlama temellerini öğrendim.",
     type: "work",
-    icon: "💼",
-    color: "from-blue-500 to-cyan-500"
+    icon: "🌐",
+    color: "from-green-500 to-emerald-500"
   },
   {
-    title: "Junior Frontend Developer",
-    company: "XYZ Yazılım",
-    period: "2021 - 2022",
-    description: "Vue.js ve JavaScript ile e-ticaret platformları geliştirdim. Responsive tasarım ve performans optimizasyonu konularında deneyim kazandım.",
+    title: "Bilgisayar Programcılığı",
+    company: "Mersin University",
+    period: "2020 - 2022",
+    description: "Associate's degree programını 3.40 not ortalaması ile tamamladım. Patika ve Dev C++ topluluklarında aktif rol aldım.",
+    type: "education",
+    icon: "📚",
+    color: "from-red-500 to-pink-500"
+  },
+  {
+    title: "Yazılım Uzmanlığı",
+    company: "Yıldız Teknik Üniversitesi",
+    period: "Eyl 2023 - Tem 2024",
+    description: "Semantik Soft Yazılım Uzmanlığı programında uzmanlık eğitimi aldım. İleri seviye yazılım geliştirme teknikleri öğrendim.",
+    type: "education",
+    icon: "🎓",
+    color: "from-yellow-500 to-orange-500"
+  },
+  {
+    title: "Junior Full-stack Developer",
+    company: "Doruksistem AS",
+    period: "Oca 2025 - Tem 2025",
+    description: "7 ay boyunca junior full-stack developer olarak çalıştım. Web teknolojileri ve veritabanı yönetimi konularında deneyim kazandım.",
     type: "work",
     icon: "💻",
     color: "from-purple-500 to-pink-500"
   },
   {
-    title: "Bilgisayar Mühendisliği",
-    company: "İstanbul Üniversitesi",
-    period: "2017 - 2021",
-    description: "Yazılım geliştirme, veri yapıları ve algoritma analizi konularında kapsamlı eğitim aldım.",
-    type: "education",
-    icon: "🎓",
-    color: "from-green-500 to-emerald-500"
+    title: "Full-stack Developer",
+    company: "Doruksistem AS",
+    period: "Tem 2025 - Günümüz",
+    description: "Kadıköy, İstanbul'da tam zamanlı full-stack geliştirici olarak çalışıyorum. Modern web teknolojileri ile kapsamlı uygulamalar geliştiriyorum.",
+    type: "work",
+    icon: "💼",
+    color: "from-blue-500 to-cyan-500"
   }
 ];
 
