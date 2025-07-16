@@ -132,7 +132,7 @@ const Skills = () => {
   return (
     <section id="skills" className="w-full relative overflow-hidden">
       {/* Animated Background */}
-      <div className="absolute inset-0 bg-gradient-to-br from-blue-600 via-purple-600 to-pink-600 dark:from-slate-900 dark:via-purple-900 dark:to-slate-900 animate-gradient opacity-90"></div>
+      <div className="absolute inset-0 bg-gradient-to-br from-violet-400 via-purple-500 to-fuchsia-600 dark:from-slate-900 dark:via-purple-900 dark:to-slate-900 animate-gradient opacity-85"></div>
       <div className="relative z-10">
         {/* Header */}
         <div className="text-center mb-20">
@@ -235,7 +235,7 @@ const Skills = () => {
                     <div className="text-gray-600 dark:text-gray-400 font-medium">Öğrenme</div>
                   </div>
                   <div className="text-center group">
-                    <div className="text-4xl font-black text-transparent bg-clip-text bg-gradient-to-r from-orange-500 to-red-500 mb-2 group-hover:scale-110 transition-transform duration-300">
+                    <div className="text-4xl font-black text-transparent bg-clip-text bg-gradient-to-r from-violet-500 to-fuchsia-500 mb-2 group-hover:scale-110 transition-transform duration-300">
                       🚀
                     </div>
                     <div className="text-gray-600 dark:text-gray-400 font-medium">Full Stack</div>

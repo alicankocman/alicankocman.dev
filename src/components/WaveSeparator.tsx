@@ -12,26 +12,39 @@ const WaveSeparator = ({ flip = false }: { flip?: boolean }) => (
       <defs>
         {/* Ana gradient - animasyonlu */}
         <linearGradient id="waveGradient1" x1="0" y1="0" x2="1440" y2="0" gradientUnits="userSpaceOnUse">
-          <stop stopColor="#2563eb" stopOpacity="0.9">
-            <animate attributeName="stop-color" values="#2563eb;#7c3aed;#db2777;#2563eb" dur="8s" repeatCount="indefinite" />
+          <stop stopColor="#3b82f6" stopOpacity="0.9">
+            <animate attributeName="stop-color" values="#3b82f6;#8b5cf6;#ec4899;#3b82f6" dur="8s" repeatCount="indefinite" />
           </stop>
-          <stop offset="0.5" stopColor="#7c3aed" stopOpacity="1">
-            <animate attributeName="stop-color" values="#7c3aed;#db2777;#2563eb;#7c3aed" dur="8s" repeatCount="indefinite" />
+          <stop offset="0.5" stopColor="#8b5cf6" stopOpacity="1">
+            <animate attributeName="stop-color" values="#8b5cf6;#ec4899;#3b82f6;#8b5cf6" dur="8s" repeatCount="indefinite" />
           </stop>
-          <stop offset="1" stopColor="#db2777" stopOpacity="0.9">
-            <animate attributeName="stop-color" values="#db2777;#2563eb;#7c3aed;#db2777" dur="8s" repeatCount="indefinite" />
+          <stop offset="1" stopColor="#ec4899" stopOpacity="0.9">
+            <animate attributeName="stop-color" values="#ec4899;#3b82f6;#8b5cf6;#ec4899" dur="8s" repeatCount="indefinite" />
+          </stop>
+        </linearGradient>
+        
+        {/* Dark mode gradient */}
+        <linearGradient id="waveGradient1Dark" x1="0" y1="0" x2="1440" y2="0" gradientUnits="userSpaceOnUse">
+          <stop stopColor="#1e3a8a" stopOpacity="0.9">
+            <animate attributeName="stop-color" values="#1e3a8a;#581c87;#be185d;#1e3a8a" dur="8s" repeatCount="indefinite" />
+          </stop>
+          <stop offset="0.5" stopColor="#581c87" stopOpacity="1">
+            <animate attributeName="stop-color" values="#581c87;#be185d;#1e3a8a;#581c87" dur="8s" repeatCount="indefinite" />
+          </stop>
+          <stop offset="1" stopColor="#be185d" stopOpacity="0.9">
+            <animate attributeName="stop-color" values="#be185d;#1e3a8a;#581c87;#be185d" dur="8s" repeatCount="indefinite" />
           </stop>
         </linearGradient>
         
         <linearGradient id="waveGradient2" x1="0" y1="0" x2="1440" y2="0" gradientUnits="userSpaceOnUse">
-          <stop stopColor="#3b82f6" stopOpacity="0.7">
-            <animate attributeName="stop-color" values="#3b82f6;#8b5cf6;#ec4899;#3b82f6" dur="6s" repeatCount="indefinite" />
+          <stop stopColor="#60a5fa" stopOpacity="0.7">
+            <animate attributeName="stop-color" values="#60a5fa;#a78bfa;#f472b6;#60a5fa" dur="6s" repeatCount="indefinite" />
           </stop>
-          <stop offset="0.5" stopColor="#8b5cf6" stopOpacity="0.8">
-            <animate attributeName="stop-color" values="#8b5cf6;#ec4899;#3b82f6;#8b5cf6" dur="6s" repeatCount="indefinite" />
+          <stop offset="0.5" stopColor="#a78bfa" stopOpacity="0.8">
+            <animate attributeName="stop-color" values="#a78bfa;#f472b6;#60a5fa;#a78bfa" dur="6s" repeatCount="indefinite" />
           </stop>
-          <stop offset="1" stopColor="#ec4899" stopOpacity="0.7">
-            <animate attributeName="stop-color" values="#ec4899;#3b82f6;#8b5cf6;#ec4899" dur="6s" repeatCount="indefinite" />
+          <stop offset="1" stopColor="#f472b6" stopOpacity="0.7">
+            <animate attributeName="stop-color" values="#f472b6;#60a5fa;#a78bfa;#f472b6" dur="6s" repeatCount="indefinite" />
           </stop>
         </linearGradient>
         
@@ -61,6 +74,25 @@ const WaveSeparator = ({ flip = false }: { flip?: boolean }) => (
       <path
         d="M0,100 C180,20 360,180 540,60 C720,-20 900,160 1080,40 C1260,-20 1440,120 1440,120 L1440,250 L0,250 Z"
         fill="url(#waveGradient1)"
+        className="dark:hidden"
+        filter="url(#glow)"
+      >
+        <animate
+          attributeName="d"
+          dur="10s"
+          repeatCount="indefinite"
+          values="M0,100 C180,20 360,180 540,60 C720,-20 900,160 1080,40 C1260,-20 1440,120 1440,120 L1440,250 L0,250 Z;
+                  M0,80 C180,140 360,0 540,100 C720,200 900,20 1080,120 C1260,220 1440,100 1440,100 L1440,250 L0,250 Z;
+                  M0,120 C180,60 360,200 540,80 C720,-40 900,140 1080,60 C1260,-20 1440,140 1440,140 L1440,250 L0,250 Z;
+                  M0,100 C180,20 360,180 540,60 C720,-20 900,160 1080,40 C1260,-20 1440,120 1440,120 L1440,250 L0,250 Z"
+        />
+      </path>
+      
+      {/* Dark mode ana dalga katmanı */}
+      <path
+        d="M0,100 C180,20 360,180 540,60 C720,-20 900,160 1080,40 C1260,-20 1440,120 1440,120 L1440,250 L0,250 Z"
+        fill="url(#waveGradient1Dark)"
+        className="hidden dark:block"
         filter="url(#glow)"
       >
         <animate

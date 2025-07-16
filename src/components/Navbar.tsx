@@ -47,8 +47,11 @@ const Navbar = () => {
 
   return (
     <nav
-      className={`fixed top-0 left-0 w-full z-50 transition-all duration-300
-        ${scrolled ? "backdrop-blur-2xl bg-white/60 dark:bg-gray-900/60 border-b border-white/30 dark:border-gray-800/50 shadow-md" : "backdrop-blur-lg bg-white/40 dark:bg-gray-900/40 border-b border-transparent"}
+      className={`fixed top-0 left-0 w-full z-50 transition-all duration-500
+        ${scrolled 
+          ? "backdrop-blur-2xl bg-white/80 dark:bg-gray-900/80 border-b border-white/50 dark:border-gray-700/60 shadow-xl" 
+          : "backdrop-blur-xl bg-white/60 dark:bg-gray-900/60 border-b border-transparent"
+        }
         ${mounted ? "animate-navbar-fade-in" : "opacity-0"}
       `}
       style={{height: 56}}

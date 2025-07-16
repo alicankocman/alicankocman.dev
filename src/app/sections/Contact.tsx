@@ -80,7 +80,7 @@ const Contact = () => {
   return (
     <section id="contact" className="w-full relative overflow-hidden">
       {/* Animated Background */}
-      <div className="absolute inset-0 bg-gradient-to-br from-blue-600 via-purple-600 to-pink-600 dark:from-slate-900 dark:via-purple-900 dark:to-slate-900 animate-gradient opacity-90"></div>
+      <div className="absolute inset-0 bg-gradient-to-br from-sky-400 via-blue-500 to-indigo-600 dark:from-slate-900 dark:via-purple-900 dark:to-slate-900 animate-gradient opacity-85"></div>
       <div className="relative z-10">
         <div className="text-center mb-16">
           <h2 className="text-5xl md:text-6xl font-bold text-gray-100 dark:text-gray-200 mb-6">
