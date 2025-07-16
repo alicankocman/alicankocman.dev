@@ -36,14 +36,14 @@ const WaveSeparator = ({ flip = false }: { flip?: boolean }) => (
         </linearGradient>
         
         <linearGradient id="waveGradient3" x1="0" y1="0" x2="1440" y2="0" gradientUnits="userSpaceOnUse">
-          <stop stopColor="#60a5fa" stopOpacity="0.5">
-            <animate attributeName="stop-color" values="#60a5fa;#a78bfa;#f472b6;#60a5fa" dur="4s" repeatCount="indefinite" />
+          <stop stopColor="#f59e0b" stopOpacity="0.5">
+            <animate attributeName="stop-color" values="#f59e0b;#10b981;#ef4444;#f59e0b" dur="4s" repeatCount="indefinite" />
           </stop>
-          <stop offset="0.5" stopColor="#a78bfa" stopOpacity="0.6">
-            <animate attributeName="stop-color" values="#a78bfa;#f472b6;#60a5fa;#a78bfa" dur="4s" repeatCount="indefinite" />
+          <stop offset="0.5" stopColor="#10b981" stopOpacity="0.6">
+            <animate attributeName="stop-color" values="#10b981;#ef4444;#f59e0b;#10b981" dur="4s" repeatCount="indefinite" />
           </stop>
-          <stop offset="1" stopColor="#f472b6" stopOpacity="0.5">
-            <animate attributeName="stop-color" values="#f472b6;#60a5fa;#a78bfa;#f472b6" dur="4s" repeatCount="indefinite" />
+          <stop offset="1" stopColor="#ef4444" stopOpacity="0.5">
+            <animate attributeName="stop-color" values="#ef4444;#f59e0b;#10b981;#ef4444" dur="4s" repeatCount="indefinite" />
           </stop>
         </linearGradient>
         
