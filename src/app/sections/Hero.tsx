@@ -33,7 +33,7 @@ const socialLinks = [
 const Hero = () => (
   <section id="hero" className="relative min-h-screen flex items-center justify-center overflow-hidden">
     {/* Animated Background */}
-    <div className="absolute inset-0 bg-gradient-to-br from-blue-600 via-purple-600 to-pink-600 animate-gradient opacity-90"></div>
+    <div className="absolute inset-0 bg-gradient-to-br from-blue-400 via-indigo-500 to-purple-600 dark:from-slate-900 dark:via-purple-900 dark:to-slate-900 animate-gradient opacity-85"></div>
     
     {/* Floating Elements */}
     <div className="absolute inset-0 overflow-hidden">

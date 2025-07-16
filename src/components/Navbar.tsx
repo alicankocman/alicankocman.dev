@@ -1,5 +1,6 @@
 "use client";
 import React, { useState, useEffect } from "react";
+import ThemeToggle from "./ThemeToggle";
 
 const navLinks = [
   { label: "Anasayfa", href: "#hero" },
@@ -46,8 +47,11 @@ const Navbar = () => {
 
   return (
     <nav
-      className={`fixed top-0 left-0 w-full z-50 transition-all duration-300
-        ${scrolled ? "backdrop-blur-2xl bg-white/60 dark:bg-gray-900/60 border-b border-white/30 dark:border-gray-800/50 shadow-md" : "backdrop-blur-lg bg-white/40 dark:bg-gray-900/40 border-b border-transparent"}
+      className={`fixed top-0 left-0 w-full z-50 transition-all duration-500
+        ${scrolled 
+          ? "backdrop-blur-2xl bg-white/80 dark:bg-gray-900/80 border-b border-white/50 dark:border-gray-700/60 shadow-xl" 
+          : "backdrop-blur-xl bg-white/60 dark:bg-gray-900/60 border-b border-transparent"
+        }
         ${mounted ? "animate-navbar-fade-in" : "opacity-0"}
       `}
       style={{height: 56}}
@@ -92,16 +96,22 @@ const Navbar = () => {
             </a>
           ))}
         </div>
-        {/* Hamburger for mobile */}
-        <button
-          className="md:hidden flex flex-col justify-center items-center w-10 h-10 rounded-full bg-white/70 dark:bg-gray-800/70 shadow border border-white/30 dark:border-gray-700/40 focus:outline-none focus:ring-2 focus:ring-blue-300 transition-all"
-          aria-label={menuOpen ? "Menüyü Kapat" : "Menüyü Aç"}
-          onClick={() => setMenuOpen(v => !v)}
-        >
-          <span className={`block w-6 h-0.5 bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 rounded transition-all duration-300 ${menuOpen ? "rotate-45 translate-y-1" : ""}`}></span>
-          <span className={`block w-6 h-0.5 bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 rounded mt-1 transition-all duration-300 ${menuOpen ? "opacity-0" : ""}`}></span>
-          <span className={`block w-6 h-0.5 bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 rounded mt-1 transition-all duration-300 ${menuOpen ? "-rotate-45 -translate-y-1" : ""}`}></span>
-        </button>
+        {/* Right side controls */}
+        <div className="flex items-center gap-2">
+          {/* Theme toggle */}
+          <ThemeToggle />
+          
+          {/* Hamburger for mobile */}
+          <button
+            className="md:hidden flex flex-col justify-center items-center w-10 h-10 rounded-full bg-white/70 dark:bg-gray-800/70 shadow border border-white/30 dark:border-gray-700/40 focus:outline-none focus:ring-2 focus:ring-blue-300 transition-all"
+            aria-label={menuOpen ? "Menüyü Kapat" : "Menüyü Aç"}
+            onClick={() => setMenuOpen(v => !v)}
+          >
+            <span className={`block w-6 h-0.5 bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 rounded transition-all duration-300 ${menuOpen ? "rotate-45 translate-y-1" : ""}`}></span>
+            <span className={`block w-6 h-0.5 bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 rounded mt-1 transition-all duration-300 ${menuOpen ? "opacity-0" : ""}`}></span>
+            <span className={`block w-6 h-0.5 bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 rounded mt-1 transition-all duration-300 ${menuOpen ? "-rotate-45 -translate-y-1" : ""}`}></span>
+          </button>
+        </div>
         {/* Mobile Menu */}
         <div className={`md:hidden fixed top-0 left-0 w-full h-full bg-black/40 z-40 transition-all duration-300 ${menuOpen ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"}`} onClick={() => setMenuOpen(false)}></div>
         <nav
