@@ -1,4 +1,5 @@
 import React from "react";
+import Image from "next/image";
 import WaveSeparator from '../../components/WaveSeparator';
 
 const About = () => (
@@ -18,7 +19,7 @@ const About = () => (
             <div className="animate-slide-in-left">
               <div className="space-y-6">
                 <p className="text-xl md:text-2xl text-gray-100 dark:text-gray-300 leading-relaxed font-medium">
-                  Merhaba! Ben Alican, İstanbul'da yaşayan bir frontend geliştiricisiyim. 
+                  Merhaba! Ben Alican, İstanbul&apos;da yaşayan bir frontend geliştiricisiyim. 
                   React ve modern web teknolojileriyle kullanıcı dostu arayüzler geliştiriyorum.
                 </p>
                 <p className="text-lg text-gray-200 dark:text-gray-400 leading-relaxed">
@@ -45,9 +46,11 @@ const About = () => (
             <div className="animate-scale-in">
               <div className="relative">
                 <div className="w-80 h-80 mx-auto bg-gradient-to-br from-emerald-400 via-teal-500 to-cyan-500 rounded-full flex items-center justify-center shadow-2xl overflow-hidden">
-                  <img 
-                    src="https://media.licdn.com/dms/image/v2/D4D03AQFi1kRrP1nscg/profile-displayphoto-shrink_800_800/B4DZavEKDQG8Ac-/0/1746693825646?e=1758153600&v=beta&t=EndPGq8roG_oyPI6vJeiO9vxWPiX2zrwF6n0Xan0ZW0"
+                  <Image 
+                    src="/images/profile.jpg"
                     alt="Alican Koçman"
+                    width={320}
+                    height={320}
                     className="w-full h-full object-cover rounded-full"
                   />
                 </div>

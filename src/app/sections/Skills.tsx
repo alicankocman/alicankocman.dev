@@ -235,7 +235,7 @@ const Skills = () => {
                     <div className="text-gray-600 dark:text-gray-400 font-medium">Öğrenme</div>
                   </div>
                   <div className="text-center group">
-                    <div className="text-4xl font-black text-transparent bg-clip-text bg-gradient-to-r from-violet-500 to-fuchsia-500 mb-2 group-hover:scale-110 transition-transform duration-300">
+                    <div className="text-4xl bg-clip-text bg-gradient-to-r from-violet-500 to-fuchsia-500 mb-2 group-hover:scale-110 transition-transform duration-300">
                       🚀
                     </div>
                     <div className="text-gray-600 dark:text-gray-400 font-medium">Full Stack</div>
