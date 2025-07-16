@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
+import WaveSeparator from '../../components/WaveSeparator';
 
 const skills = [
   { 
@@ -130,22 +131,16 @@ const Skills = () => {
 
   return (
     <section id="skills" className="w-full relative overflow-hidden">
-      {/* Animated background */}
-      <div className="absolute inset-0 bg-gradient-to-br from-blue-50 via-purple-50 to-pink-50 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900">
-        <div className="absolute top-20 left-20 w-72 h-72 bg-blue-400 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-blob"></div>
-        <div className="absolute top-40 right-20 w-72 h-72 bg-purple-400 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-blob animation-delay-2000"></div>
-        <div className="absolute -bottom-8 left-40 w-72 h-72 bg-pink-400 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-blob animation-delay-4000"></div>
-      </div>
-
+      {/* Animated Background */}
+      <div className="absolute inset-0 bg-gradient-to-br from-blue-600 via-purple-600 to-pink-600 animate-gradient opacity-90"></div>
       <div className="relative z-10">
         {/* Header */}
         <div className="text-center mb-20">
-          <h2 className="text-6xl md:text-7xl font-black text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 mb-8">
+          <h2 className="text-6xl md:text-7xl font-black text-transparent bg-clip-text bg-gradient-to-r from-blue-200 via-purple-200 to-pink-200 mb-8">
             Yetenekler
           </h2>
           <div className="w-48 h-2 bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 mx-auto rounded-full shadow-lg"></div>
         </div>
-        
         <div className="max-w-7xl mx-auto px-4">
           {/* Skills Grid */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8 mb-16">
@@ -208,7 +203,7 @@ const Skills = () => {
           
           {/* Interactive Summary */}
           <div className="relative">
-            <div className="bg-gradient-to-r from-white/80 to-white/60 dark:from-gray-800/80 dark:to-gray-800/60 backdrop-blur-xl rounded-3xl p-12 border border-white/20 dark:border-gray-700/50 shadow-2xl">
+            <div className="bg-gradient-to-r from-white/20 to-white/10 dark:from-gray-800/40 dark:to-gray-800/20 backdrop-blur-xl rounded-3xl p-12 border border-white/20 dark:border-gray-700/50 shadow-2xl">
               <div className="text-center">
                 <h3 className="text-4xl font-black text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600 mb-6">
                   Teknoloji Yığınım
@@ -251,6 +246,7 @@ const Skills = () => {
           </div>
         </div>
       </div>
+      <WaveSeparator flip />
     </section>
   );
 };
