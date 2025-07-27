@@ -1,8 +1,26 @@
 "use client"
-import React from "react";
+import React, { useEffect, useState } from "react";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
+  const [isDark, setIsDark] = useState(false);
+
+  useEffect(() => {
+    const isDarkMode = document.documentElement.classList.contains('dark');
+    setIsDark(isDarkMode);
+    
+    const observer = new MutationObserver(() => {
+      const darkMode = document.documentElement.classList.contains('dark');
+      setIsDark(darkMode);
+    });
+    
+    observer.observe(document.documentElement, {
+      attributes: true,
+      attributeFilter: ['class']
+    });
+    
+    return () => observer.disconnect();
+  }, []);
 
   const socialLinks = [
     {
@@ -35,22 +53,29 @@ const Footer = () => {
   ];
 
   return (
-    <footer className="bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 text-white">
+    <footer 
+      className="bg-gray-100 dark:bg-gray-900 text-gray-900 dark:text-white"
+      style={{ 
+        backgroundColor: isDark ? '#111827' : '#f8fafc', 
+        color: isDark ? '#ffffff' : '#1e293b',
+        borderTop: `1px solid ${isDark ? '#374151' : '#e2e8f0'}`
+      }}
+    >
       <div className="max-w-7xl mx-auto px-6 py-16">
         {/* Main Footer Content */}
         <div className="grid md:grid-cols-3 gap-12 mb-12">
           {/* Brand Section */}
           <div className="space-y-6">
             <div className="flex items-center space-x-3">
-              <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-purple-600 rounded-xl flex items-center justify-center">
-                <span className="text-2xl font-bold">AK</span>
+              <div className="w-12 h-12 bg-blue-500 rounded-xl flex items-center justify-center">
+                <span className="text-2xl font-bold text-white">AK</span>
               </div>
               <div>
-                <h3 className="text-2xl font-bold">Alican Koçman</h3>
-                <p className="text-blue-300">Full-stack Developer</p>
+                <h3 className="text-2xl font-bold text-gray-900 dark:text-white">Alican Koçman</h3>
+                <p className="text-blue-600 dark:text-blue-300">Full-stack Developer</p>
               </div>
             </div>
-            <p className="text-gray-300 leading-relaxed">
+            <p className="text-gray-600 dark:text-gray-300 leading-relaxed">
               Modern web teknolojileri ile kullanıcı dostu ve performanslı 
               uygulamalar geliştiren tutkulu bir yazılım geliştiricisi.
             </p>
@@ -58,30 +83,30 @@ const Footer = () => {
 
           {/* Quick Links */}
           <div className="space-y-6">
-            <h4 className="text-xl font-bold text-white">Hızlı Linkler</h4>
+            <h4 className="text-xl font-bold text-gray-900 dark:text-white">Hızlı Linkler</h4>
             <ul className="space-y-3">
               <li>
-                <a href="#about" className="text-gray-300 hover:text-blue-400 transition-colors duration-200">
+                <a href="#about" className="text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400">
                   Hakkımda
                 </a>
               </li>
               <li>
-                <a href="#experience" className="text-gray-300 hover:text-blue-400 transition-colors duration-200">
+                <a href="#experience" className="text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400">
                   Deneyim
                 </a>
               </li>
               <li>
-                <a href="#projects" className="text-gray-300 hover:text-blue-400 transition-colors duration-200">
+                <a href="#projects" className="text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400">
                   Projeler
                 </a>
               </li>
               <li>
-                <a href="#skills" className="text-gray-300 hover:text-blue-400 transition-colors duration-200">
+                <a href="#skills" className="text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400">
                   Yetenekler
                 </a>
               </li>
               <li>
-                <a href="#contact" className="text-gray-300 hover:text-blue-400 transition-colors duration-200">
+                <a href="#contact" className="text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400">
                   İletişim
                 </a>
               </li>
@@ -90,27 +115,27 @@ const Footer = () => {
 
           {/* Contact Info */}
           <div className="space-y-6">
-            <h4 className="text-xl font-bold text-white">İletişim</h4>
+            <h4 className="text-xl font-bold text-gray-900 dark:text-white">İletişim</h4>
             <div className="space-y-4">
-                             <div className="flex items-center space-x-3">
-                 <svg className="w-5 h-5 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-                 </svg>
-                 <span className="text-gray-300">kocmanalican@gmail.com</span>
-               </div>
               <div className="flex items-center space-x-3">
-                <svg className="w-5 h-5 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <svg className="w-5 h-5 text-blue-600 dark:text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                </svg>
+                <span className="text-gray-600 dark:text-gray-300">kocmanalican@gmail.com</span>
+              </div>
+              <div className="flex items-center space-x-3">
+                <svg className="w-5 h-5 text-blue-600 dark:text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
                 </svg>
-                <span className="text-gray-300">İstanbul, Türkiye</span>
+                <span className="text-gray-600 dark:text-gray-300">İstanbul, Türkiye</span>
               </div>
             </div>
           </div>
         </div>
 
         {/* Social Links */}
-        <div className="border-t border-gray-700 pt-8">
+        <div className="border-t border-gray-300 dark:border-gray-700 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
             <div className="flex space-x-6">
               {socialLinks.map((social) => (
@@ -119,7 +144,7 @@ const Footer = () => {
                   href={social.url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-12 h-12 bg-gray-800 hover:bg-blue-600 rounded-xl flex items-center justify-center transition-all duration-300 transform hover:scale-110 hover:shadow-lg"
+                  className="w-12 h-12 bg-gray-200 dark:bg-gray-800 rounded-xl flex items-center justify-center text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400"
                   aria-label={social.name}
                 >
                   {social.icon}
@@ -128,17 +153,15 @@ const Footer = () => {
             </div>
             
             <div className="text-center md:text-right">
-              <p className="text-gray-400">
+              <p className="text-gray-500 dark:text-gray-400">
                 © {currentYear} Alican Koçman. Tüm hakları saklıdır.
               </p>
-              <p className="text-sm text-gray-500 mt-1">
+              <p className="text-sm text-gray-400 dark:text-gray-500 mt-1">
                 Next.js & Tailwind CSS ile geliştirildi
               </p>
             </div>
           </div>
         </div>
-
-        
       </div>
     </footer>
   );

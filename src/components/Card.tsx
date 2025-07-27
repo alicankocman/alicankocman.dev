@@ -15,12 +15,12 @@ const Card: React.FC<CardProps> = ({
   onClick,
   href,
 }) => {
-  const baseClasses = "bg-white dark:bg-gray-900 rounded-xl transition-all duration-300";
+  const baseClasses = "bg-white dark:bg-gray-900 rounded-xl";
   
   const variantClasses = {
-    default: "shadow-md hover:shadow-lg",
-    elevated: "shadow-lg hover:shadow-xl transform hover:-translate-y-1",
-    outlined: "border border-gray-200 dark:border-gray-700 hover:border-blue-300 dark:hover:border-blue-600",
+    default: "shadow-md",
+    elevated: "shadow-lg",
+    outlined: "border border-gray-200 dark:border-gray-700",
   };
   
   const classes = `${baseClasses} ${variantClasses[variant]} ${className}`;

@@ -1,72 +1,90 @@
 import React from "react";
 import Image from "next/image";
-import WaveSeparator from '../../components/WaveSeparator';
+import { User } from "lucide-react";
+
+const skills = [
+  "React", "Next.js", "TypeScript", "Node.js", "JavaScript", "HTML/CSS", "Git", "REST API", "MongoDB", "PostgreSQL"
+];
 
 const About = () => (
-  <section id="about" className="w-full relative overflow-hidden min-h-screen bg-gradient-to-br from-emerald-400 via-teal-500 to-cyan-600 dark:from-slate-900 dark:via-purple-900 dark:to-slate-900">
-    {/* Optimized Animated Background */}
-    <div className="absolute inset-0 bg-gradient-to-br from-emerald-400 via-teal-500 to-cyan-600 dark:from-slate-900 dark:via-purple-900 dark:to-slate-900 animate-gradient opacity-85"></div>
-    <div className="relative z-10 flex items-center min-h-screen py-16">
-      <div className="w-full">
-        <div className="text-center mb-12">
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-800 dark:text-gray-200 mb-6">
-            Hakkımda
-          </h2>
-          <div className="w-24 h-1 bg-gradient-to-r from-emerald-500 to-cyan-500 mx-auto rounded-full"></div>
+  <section id="about" className="section-gray">
+    <div className="container">
+      <div className="grid lg:grid-cols-2 gap-12 items-center">
+        {/* Professional Content */}
+        <div>
+          {/* Professional Header */}
+          <div className="mb-8">
+            <div className="inline-flex items-center justify-center w-16 h-16 bg-blue-600 rounded-full mb-6">
+              <User className="text-2xl" />
+            </div>
+            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4">
+              Hakkımda
+            </h2>
+            <div className="w-16 h-1 bg-blue-600 rounded-full"></div>
+          </div>
+          
+          {/* Professional Description */}
+          <div className="space-y-6 text-lg text-gray-700 dark:text-gray-300 leading-relaxed">
+            <p>
+              Merhaba! Ben Alican Koçman, tutkulu bir Full Stack Developer'ım. Modern web teknolojileri ile kullanıcı dostu ve performanslı uygulamalar geliştirmeyi seviyorum.
+            </p>
+            <p>
+              Doruksistem AS'de Full Stack Developer olarak çalışıyorum. React, Next.js, TypeScript ve Node.js gibi modern teknolojilerle hem frontend hem backend geliştirme yapıyorum.
+            </p>
+            <p>
+              Sürekli öğrenmeye odaklanıyorum ve yeni teknolojileri hızlıca adapte edebiliyorum. Takım çalışmasına değer veriyor ve her projede en yüksek kaliteyi hedefliyorum.
+            </p>
+          </div>
+          
+          {/* Professional Skills */}
+          <div className="mt-8">
+            <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-4">
+              Teknolojiler
+            </h3>
+            <div className="flex flex-wrap gap-3">
+              {skills.map((skill) => (
+                <span key={skill} className="px-4 py-2 bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 rounded-lg text-sm font-medium">
+                  {skill}
+                </span>
+              ))}
+            </div>
+          </div>
         </div>
-        <div className="max-w-6xl mx-auto">
-          <div className="rounded-3xl shadow-2xl p-8 md:p-12 border border-gray-100 dark:border-gray-700">
-            <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-              <div className="animate-slide-in-left">
-                <div className="space-y-6">
-                  <p className="text-lg md:text-xl lg:text-2xl text-gray-100 dark:text-gray-300 leading-relaxed font-medium">
-                    Merhaba! Ben Alican, İstanbul&apos;da yaşayan bir frontend geliştiricisiyim. 
-                    React ve modern web teknolojileriyle kullanıcı dostu arayüzler geliştiriyorum.
-                  </p>
-                  <p className="text-base md:text-lg text-gray-200 dark:text-gray-400 leading-relaxed">
-                    Yazılım geliştirme tutkum, kullanıcı deneyimini ön planda tutan, 
-                    performanslı ve ölçeklenebilir web uygulamaları oluşturmaya odaklanıyor.
-                  </p>
-                  <p className="text-base md:text-lg text-gray-200 dark:text-gray-400 leading-relaxed">
-                    Her projede en son teknolojileri kullanarak, kullanıcıların hayatını kolaylaştıran 
-                    ve estetik açıdan etkileyici arayüzler tasarlamayı hedefliyorum.
-                  </p>
-                </div>
-                <div className="mt-8 flex flex-wrap gap-3">
-                  <span className="px-4 py-2 md:px-6 md:py-3 bg-gradient-to-r from-emerald-500 to-teal-600 text-white font-semibold rounded-full shadow-lg text-sm md:text-base">
-                    Frontend Development
-                  </span>
-                  <span className="px-4 py-2 md:px-6 md:py-3 bg-gradient-to-r from-teal-500 to-cyan-600 text-white font-semibold rounded-full shadow-lg text-sm md:text-base">
-                    UI/UX Design
-                  </span>
-                  <span className="px-4 py-2 md:px-6 md:py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-full shadow-lg text-sm md:text-base">
-                    Performance
-                  </span>
-                </div>
+        
+        {/* Professional Image */}
+        <div className="flex justify-center lg:justify-end">
+          <div className="relative">
+            <div className="w-80 h-80 bg-gradient-to-br from-blue-500 to-purple-600 rounded-2xl p-1">
+              <div className="w-full h-full bg-white dark:bg-gray-800 rounded-2xl overflow-hidden">
+                <Image 
+                  src="/images/profile.jpg"
+                  alt="Alican Koçman"
+                  width={320}
+                  height={320}
+                  className="w-full h-full object-cover"
+                  priority
+                />
               </div>
-              <div className="animate-scale-in">
-                <div className="relative">
-                  <div className="w-64 h-64 md:w-80 md:h-80 mx-auto bg-gradient-to-br from-emerald-400 via-teal-500 to-cyan-500 rounded-full flex items-center justify-center shadow-2xl overflow-hidden">
-                    <Image 
-                      src="/images/profile.jpg"
-                      alt="Alican Koçman"
-                      width={320}
-                      height={320}
-                      className="w-full h-full object-cover rounded-full"
-                      priority
-                    />
-                  </div>
-                  <div className="absolute -top-3 -left-3 w-12 h-12 md:w-16 md:h-16 bg-emerald-400 rounded-full animate-float"></div>
-                  <div className="absolute -bottom-3 -right-3 w-8 h-8 md:w-12 md:h-12 bg-teal-400 rounded-full animate-float" style={{animationDelay: '3s'}}></div>
-                  <div className="absolute top-1/2 -right-6 w-6 h-6 md:w-8 md:h-8 bg-cyan-400 rounded-full animate-float" style={{animationDelay: '6s'}}></div>
-                </div>
+            </div>
+            
+            {/* Professional Stats */}
+            <div className="absolute -bottom-6 -left-6 bg-white dark:bg-gray-800 rounded-xl p-4 shadow-lg border border-gray-200 dark:border-gray-700">
+              <div className="text-center">
+                <div className="text-2xl font-bold text-blue-600 mb-1">5+</div>
+                <div className="text-sm text-gray-600 dark:text-gray-400">Yıl Deneyim</div>
+              </div>
+            </div>
+            
+            <div className="absolute -top-6 -right-6 bg-white dark:bg-gray-800 rounded-xl p-4 shadow-lg border border-gray-200 dark:border-gray-700">
+              <div className="text-center">
+                <div className="text-2xl font-bold text-green-600 mb-1">50+</div>
+                <div className="text-sm text-gray-600 dark:text-gray-400">Proje</div>
               </div>
             </div>
           </div>
         </div>
       </div>
     </div>
-    <WaveSeparator flip />
   </section>
 );
 
