@@ -98,13 +98,13 @@ const Hero = () => {
             <div className="grid grid-cols-3 gap-3 lg:gap-6 py-3 lg:py-6">
               <div className="text-center p-2 lg:p-4 bg-white dark:bg-gray-800 rounded-lg lg:rounded-xl shadow-lg border border-gray-200 dark:border-gray-700">
                 <div className="text-xl lg:text-3xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
-                  5+
+                  1+
                 </div>
                 <p className="text-xs lg:text-sm text-gray-600 dark:text-gray-400">Yıl Deneyim</p>
               </div>
               <div className="text-center p-2 lg:p-4 bg-white dark:bg-gray-800 rounded-lg lg:rounded-xl shadow-lg border border-gray-200 dark:border-gray-700">
                 <div className="text-xl lg:text-3xl font-bold bg-gradient-to-r from-green-600 to-blue-600 bg-clip-text text-transparent">
-                  50+
+                  15+
                 </div>
                 <p className="text-xs lg:text-sm text-gray-600 dark:text-gray-400">Tamamlanan Proje</p>
               </div>

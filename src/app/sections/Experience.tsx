@@ -61,7 +61,7 @@ const Experience = () => (
       {/* Stats */}
       <div className="grid grid-cols-4 gap-6 mb-16">
         <div className="text-center">
-          <div className="text-3xl font-bold text-blue-600 mb-2">5+</div>
+          <div className="text-3xl font-bold text-blue-600 mb-2">1+</div>
           <p className="text-gray-600 dark:text-gray-400">Yıl Deneyim</p>
         </div>
         <div className="text-center">

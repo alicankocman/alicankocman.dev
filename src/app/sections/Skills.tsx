@@ -96,11 +96,11 @@ const Skills = () => {
         {/* Stats */}
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 lg:gap-6 mb-8 lg:mb-16 px-4 lg:px-0">
           <div className="text-center">
-            <div className="text-xl lg:text-3xl font-bold text-blue-600 mb-1 lg:mb-2">5+</div>
+            <div className="text-xl lg:text-3xl font-bold text-blue-600 mb-1 lg:mb-2">1+</div>
             <p className="text-xs lg:text-base text-gray-600 dark:text-gray-400">Yıl Deneyim</p>
           </div>
           <div className="text-center">
-            <div className="text-xl lg:text-3xl font-bold text-green-600 mb-1 lg:mb-2">50+</div>
+            <div className="text-xl lg:text-3xl font-bold text-green-600 mb-1 lg:mb-2">15+</div>
             <p className="text-xs lg:text-base text-gray-600 dark:text-gray-400">Tamamlanan Proje</p>
           </div>
           <div className="text-center">

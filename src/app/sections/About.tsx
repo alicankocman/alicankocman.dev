@@ -70,14 +70,14 @@ const About = () => (
             {/* Professional Stats */}
             <div className="absolute -bottom-6 -left-6 bg-white dark:bg-gray-800 rounded-xl p-4 shadow-lg border border-gray-200 dark:border-gray-700">
               <div className="text-center">
-                <div className="text-2xl font-bold text-blue-600 mb-1">5+</div>
+                <div className="text-2xl font-bold text-blue-600 mb-1">1+</div>
                 <div className="text-sm text-gray-600 dark:text-gray-400">Yıl Deneyim</div>
               </div>
             </div>
             
             <div className="absolute -top-6 -right-6 bg-white dark:bg-gray-800 rounded-xl p-4 shadow-lg border border-gray-200 dark:border-gray-700">
               <div className="text-center">
-                <div className="text-2xl font-bold text-green-600 mb-1">50+</div>
+                <div className="text-2xl font-bold text-green-600 mb-1">15+</div>
                 <div className="text-sm text-gray-600 dark:text-gray-400">Proje</div>
               </div>
             </div>
