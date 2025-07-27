@@ -19,39 +19,37 @@
   color-scheme: dark;
 }
 
-/* Smooth transitions for theme switching */
+/* Optimized transitions for theme switching */
 * {
-  transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease;
+  transition: background-color 0.2s ease, border-color 0.2s ease, color 0.2s ease;
 }
 
+/* Optimized body background - removed complex animations */
 body {
   background: linear-gradient(135deg, #3b82f6 0%, #8b5cf6 50%, #ec4899 100%);
-  background-size: 400% 400%;
-  animation: gradientMove 15s ease infinite;
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+  /* Removed animation to prevent layout shift */
 }
 
 @media (prefers-color-scheme: dark) {
   body {
     background: linear-gradient(135deg, #2563eb 0%, #7c3aed 50%, #db2777 100%);
-    background-size: 400% 400%;
-    animation: gradientMove 15s ease infinite;
   }
 }
 
 /* Dark mode body background */
 .dark body {
   background: linear-gradient(135deg, #0f172a 0%, #1e1b4b 50%, #450a0a 100%);
-  background-size: 400% 400%;
-  animation: gradientMove 15s ease infinite;
 }
 
-/* Modern Animasyonlar */
+/* Optimized Animasyonlar */
 @layer utilities {
+  /* Simplified gradient animation */
   .animate-gradient {
     background-size: 400% 400%;
-    animation: gradientMove 15s ease infinite;
+    animation: gradientMove 20s ease infinite;
+    will-change: background-position;
   }
   
   @keyframes gradientMove {
@@ -60,23 +58,27 @@ body {
     100% { background-position: 0% 50%; }
   }
   
+  /* Optimized float animation */
   .animate-float {
-    animation: float 6s ease-in-out infinite;
+    animation: float 8s ease-in-out infinite;
+    will-change: transform;
   }
   
   @keyframes float {
     0%, 100% { transform: translateY(0px); }
-    50% { transform: translateY(-20px); }
+    50% { transform: translateY(-15px); }
   }
   
+  /* Faster fade-in animation */
   .animate-fade-in-up {
-    animation: fadeInUp 0.8s ease-out;
+    animation: fadeInUp 0.5s ease-out;
+    will-change: opacity, transform;
   }
   
   @keyframes fadeInUp {
     from {
       opacity: 0;
-      transform: translateY(30px);
+      transform: translateY(20px);
     }
     to {
       opacity: 1;
@@ -84,14 +86,16 @@ body {
     }
   }
   
+  /* Optimized slide animation */
   .animate-slide-in-left {
-    animation: slideInLeft 0.8s ease-out;
+    animation: slideInLeft 0.5s ease-out;
+    will-change: opacity, transform;
   }
   
   @keyframes slideInLeft {
     from {
       opacity: 0;
-      transform: translateX(-50px);
+      transform: translateX(-30px);
     }
     to {
       opacity: 1;
@@ -100,13 +104,14 @@ body {
   }
   
   .animate-scale-in {
-    animation: scaleIn 0.6s ease-out;
+    animation: scaleIn 0.4s ease-out;
+    will-change: opacity, transform;
   }
   
   @keyframes scaleIn {
     from {
       opacity: 0;
-      transform: scale(0.8);
+      transform: scale(0.9);
     }
     to {
       opacity: 1;
@@ -114,16 +119,19 @@ body {
     }
   }
   
+  /* Optimized glass effects */
   .glass-effect {
     background: rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(10px);
     border: 1px solid rgba(255, 255, 255, 0.2);
+    will-change: backdrop-filter;
   }
   
   .glass-effect-dark {
     background: rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(10px);
     border: 1px solid rgba(255, 255, 255, 0.1);
+    will-change: backdrop-filter;
   }
   
   /* Enhanced glass effects for both themes */
@@ -132,6 +140,7 @@ body {
     backdrop-filter: blur(15px);
     border: 1px solid rgba(255, 255, 255, 0.25);
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    will-change: backdrop-filter;
   }
   
   .glass-dark {
@@ -139,6 +148,7 @@ body {
     backdrop-filter: blur(15px);
     border: 1px solid rgba(255, 255, 255, 0.15);
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+    will-change: backdrop-filter;
   }
   
   /* Theme-specific text shadows */
@@ -167,9 +177,10 @@ body {
     transform: rotateY(180deg);
   }
   
-  /* Blob Animation */
+  /* Optimized blob animation */
   .animate-blob {
-    animation: blob 7s infinite;
+    animation: blob 10s infinite;
+    will-change: transform;
   }
   
   @keyframes blob {
@@ -177,10 +188,10 @@ body {
       transform: translate(0px, 0px) scale(1);
     }
     33% {
-      transform: translate(30px, -50px) scale(1.1);
+      transform: translate(20px, -30px) scale(1.05);
     }
     66% {
-      transform: translate(-20px, 20px) scale(0.9);
+      transform: translate(-15px, 15px) scale(0.95);
     }
     100% {
       transform: translate(0px, 0px) scale(1);
@@ -200,19 +211,20 @@ body {
     text-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
   }
   
-  /* Enhanced Shadows */
+  /* Enhanced shadows */
   .shadow-3xl {
     box-shadow: 0 35px 60px -12px rgba(0, 0, 0, 0.25);
   }
   
-  /* Bounce Animation */
+  /* Optimized bounce animation */
   .animate-bounce {
     animation: bounce 2s infinite;
+    will-change: transform;
   }
   
   @keyframes bounce {
     0%, 20%, 53%, 80%, 100% {
-      transform: translate3d(0,0,0);
+      transform: translate3d(0, 0, 0);
     }
     40%, 43% {
       transform: translate3d(0, -8px, 0);
@@ -232,43 +244,99 @@ body {
 }
 
 ::-webkit-scrollbar-track {
-  background: #f1f1f1;
+  background: rgba(0, 0, 0, 0.1);
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #888;
+  background: rgba(0, 0, 0, 0.3);
   border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #555;
+  background: rgba(0, 0, 0, 0.5);
 }
 
-/* Dark mode scrollbar */
 .dark ::-webkit-scrollbar-track {
-  background: #1a1a1a;
+  background: rgba(255, 255, 255, 0.1);
 }
 
 .dark ::-webkit-scrollbar-thumb {
-  background: #404040;
+  background: rgba(255, 255, 255, 0.3);
 }
 
 .dark ::-webkit-scrollbar-thumb:hover {
-  background: #606060;
+  background: rgba(255, 255, 255, 0.5);
 }
 
-/* Navbar Animations */
+/* Optimized navbar animations */
 .animate-navbar-fade-in {
-  animation: navbarFadeIn 0.7s cubic-bezier(0.4,0,0.2,1) both;
+  animation: navbarFadeIn 0.3s ease-out;
 }
+
 @keyframes navbarFadeIn {
-  from { opacity: 0; transform: translateY(-24px); }
-  to { opacity: 1; transform: none; }
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
 }
+
 .animate-navbar-glow {
-  animation: navbarGlow 1.2s infinite alternate;
+  animation: navbarGlow 2s ease-in-out infinite alternate;
 }
+
 @keyframes navbarGlow {
   from { opacity: 0.25; }
-  to { opacity: 0.45; }
+  to { opacity: 0.4; }
+}
+
+/* Section height fixes to prevent layout shift */
+section {
+  min-height: 100vh;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Optimize for reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+  
+  .animate-gradient,
+  .animate-float,
+  .animate-fade-in-up,
+  .animate-slide-in-left,
+  .animate-scale-in,
+  .animate-blob,
+  .animate-bounce {
+    animation: none !important;
+  }
+}
+
+/* Performance optimizations */
+* {
+  box-sizing: border-box;
+}
+
+/* Prevent layout shift during image loading */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Smooth scrolling optimization */
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 80px; /* Account for fixed navbar */
+}
+
+/* Reduce paint operations */
+.animate-gradient,
+.animate-float,
+.animate-fade-in-up,
+.animate-slide-in-left,
+.animate-scale-in {
+  transform: translateZ(0); /* Force hardware acceleration */
 }

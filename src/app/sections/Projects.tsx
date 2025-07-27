@@ -29,62 +29,64 @@ const projects = [
 ];
 
 const Projects = () => (
-  <section id="projects" className="w-full relative overflow-hidden">
-    {/* Animated Background */}
+  <section id="projects" className="w-full relative overflow-hidden min-h-screen bg-gradient-to-br from-orange-400 via-red-500 to-pink-600 dark:from-slate-900 dark:via-purple-900 dark:to-slate-900">
+    {/* Optimized Animated Background */}
     <div className="absolute inset-0 bg-gradient-to-br from-orange-400 via-red-500 to-pink-600 dark:from-slate-900 dark:via-purple-900 dark:to-slate-900 animate-gradient opacity-85"></div>
-    <div className="relative z-10">
-      <div className="text-center mb-16">
-        <h2 className="text-5xl md:text-6xl font-bold text-gray-100 dark:text-gray-200 mb-6">
-          Projeler
-        </h2>
-        <div className="w-32 h-1 bg-gradient-to-r from-blue-500 to-purple-500 mx-auto rounded-full"></div>
-      </div>
-      <div className="max-w-7xl mx-auto">
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {projects.map((project, index) => (
-            <div 
-              key={index} 
-              className="group relative rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-4 animate-fade-in-up overflow-hidden bg-white/10 dark:bg-gray-800/30"
-              style={{ animationDelay: `${index * 0.2}s` }}
-            >
-              <div className={`h-48 bg-gradient-to-br ${project.color} flex items-center justify-center relative overflow-hidden`}>
-                <div className="text-6xl text-white/80">💻</div>
-                <div className="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-              </div>
-              <div className="p-8">
-                <h3 className="text-2xl font-bold text-gray-100 dark:text-gray-200 mb-4 group-hover:text-blue-200 dark:group-hover:text-blue-400 transition-colors">
-                  {project.title}
-                </h3>
-                <p className="text-gray-200 dark:text-gray-400 mb-6 leading-relaxed">
-                  {project.description}
-                </p>
-                <div className="flex flex-wrap gap-2 mb-6">
-                  {project.tech.map((tech) => (
-                    <span key={tech} className="px-3 py-1 bg-gray-100/20 dark:bg-gray-700/40 text-gray-100 dark:text-gray-300 text-sm font-medium rounded-full">
-                      {tech}
-                    </span>
-                  ))}
+    <div className="relative z-10 flex items-center min-h-screen py-16">
+      <div className="w-full">
+        <div className="text-center mb-12">
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-100 dark:text-gray-200 mb-6">
+            Projeler
+          </h2>
+          <div className="w-24 h-1 bg-gradient-to-r from-blue-500 to-purple-500 mx-auto rounded-full"></div>
+        </div>
+        <div className="max-w-7xl mx-auto">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+            {projects.map((project, index) => (
+              <div 
+                key={index} 
+                className="group relative rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 animate-fade-in-up overflow-hidden bg-white/10 dark:bg-gray-800/30"
+                style={{ animationDelay: `${index * 0.1}s` }}
+              >
+                <div className={`h-40 md:h-48 bg-gradient-to-br ${project.color} flex items-center justify-center relative overflow-hidden`}>
+                  <div className="text-4xl md:text-6xl text-white/80">💻</div>
+                  <div className="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                 </div>
-                <a
-                  href={project.link}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center text-blue-200 dark:text-blue-400 hover:text-blue-300 dark:hover:text-blue-300 font-semibold transition-colors group/link"
-                >
-                  Projeyi Görüntüle
-                  <svg className="w-5 h-5 ml-2 group-hover/link:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-                  </svg>
-                </a>
+                <div className="p-6 md:p-8">
+                  <h3 className="text-xl md:text-2xl font-bold text-gray-100 dark:text-gray-200 mb-3 md:mb-4 group-hover:text-blue-200 dark:group-hover:text-blue-400 transition-colors">
+                    {project.title}
+                  </h3>
+                  <p className="text-sm md:text-base text-gray-200 dark:text-gray-400 mb-4 md:mb-6 leading-relaxed">
+                    {project.description}
+                  </p>
+                  <div className="flex flex-wrap gap-2 mb-4 md:mb-6">
+                    {project.tech.map((tech) => (
+                      <span key={tech} className="px-2 py-1 md:px-3 md:py-1 bg-gray-100/20 dark:bg-gray-700/40 text-gray-100 dark:text-gray-300 text-xs md:text-sm font-medium rounded-full">
+                        {tech}
+                      </span>
+                    ))}
+                  </div>
+                  <a
+                    href={project.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center text-blue-200 dark:text-blue-400 hover:text-blue-300 dark:hover:text-blue-300 font-semibold transition-colors group/link text-sm md:text-base"
+                  >
+                    Projeyi Görüntüle
+                    <svg className="w-4 h-4 md:w-5 md:h-5 ml-2 group-hover/link:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                    </svg>
+                  </a>
+                </div>
+                <div className="absolute inset-0 bg-gradient-to-br from-blue-500/5 to-purple-500/5 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               </div>
-              <div className="absolute inset-0 bg-gradient-to-br from-blue-500/5 to-purple-500/5 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
       </div>
     </div>
     <WaveSeparator flip />
-    </section>
+  </section>
 );
 
 export default Projects; 
