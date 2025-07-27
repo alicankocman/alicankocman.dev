@@ -31,48 +31,47 @@ const socialLinks = [
 ];
 
 const Hero = () => (
-  <section id="hero" className="relative min-h-screen flex items-center justify-center overflow-hidden">
-    {/* Animated Background */}
+  <section id="hero" className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-blue-400 via-indigo-500 to-purple-600 dark:from-slate-900 dark:via-purple-900 dark:to-slate-900">
+    {/* Optimized Animated Background */}
     <div className="absolute inset-0 bg-gradient-to-br from-blue-400 via-indigo-500 to-purple-600 dark:from-slate-900 dark:via-purple-900 dark:to-slate-900 animate-gradient opacity-85"></div>
     
-    {/* Floating Elements */}
-    <div className="absolute inset-0 overflow-hidden">
-      <div className="absolute top-20 left-10 w-20 h-20 bg-white/10 rounded-full animate-float"></div>
-      <div className="absolute top-40 right-20 w-16 h-16 bg-white/10 rounded-full animate-float" style={{animationDelay: '2s'}}></div>
-      <div className="absolute bottom-20 left-20 w-24 h-24 bg-white/10 rounded-full animate-float" style={{animationDelay: '4s'}}></div>
-      <div className="absolute bottom-40 right-10 w-12 h-12 bg-white/10 rounded-full animate-float" style={{animationDelay: '1s'}}></div>
+    {/* Reduced Floating Elements for better performance */}
+    <div className="absolute inset-0 overflow-hidden pointer-events-none">
+      <div className="absolute top-20 left-10 w-16 h-16 bg-white/10 rounded-full animate-float"></div>
+      <div className="absolute top-40 right-20 w-12 h-12 bg-white/10 rounded-full animate-float" style={{animationDelay: '3s'}}></div>
+      <div className="absolute bottom-20 left-20 w-20 h-20 bg-white/10 rounded-full animate-float" style={{animationDelay: '6s'}}></div>
     </div>
     
-    {/* Main Content */}
+    {/* Main Content with optimized animations */}
     <div className="relative z-10 text-center px-4 max-w-4xl mx-auto">
       <div className="animate-fade-in-up">
-        <h1 className="text-6xl md:text-8xl font-black mb-6 text-white tracking-tight">
+        <h1 className="text-5xl md:text-7xl lg:text-8xl font-black mb-6 text-white tracking-tight">
           Alican Koçman
         </h1>
         
         <div className="mb-8">
-          <h2 className="text-2xl md:text-4xl font-bold text-white/90 mb-4">
+          <h2 className="text-xl md:text-3xl lg:text-4xl font-bold text-white/90 mb-4">
             Frontend Developer
           </h2>
-          <div className="w-24 h-1 bg-white mx-auto rounded-full"></div>
+          <div className="w-20 h-1 bg-white mx-auto rounded-full"></div>
         </div>
         
-        <p className="text-xl md:text-2xl text-white/80 mb-12 max-w-3xl mx-auto leading-relaxed">
+        <p className="text-lg md:text-xl lg:text-2xl text-white/80 mb-10 max-w-3xl mx-auto leading-relaxed">
           Modern web uygulamaları geliştiriyorum. Kullanıcı odaklı, performanslı ve ölçeklenebilir arayüzler tasarlamayı seviyorum.
         </p>
         
         {/* CTA Buttons */}
-        <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-          <button className="px-8 py-4 bg-white text-blue-600 font-bold rounded-full hover:bg-gray-100 transition-all duration-300 transform hover:scale-105 shadow-lg">
+        <div className="flex flex-col sm:flex-row gap-4 justify-center mb-10">
+          <button className="px-6 py-3 md:px-8 md:py-4 bg-white text-blue-600 font-bold rounded-full hover:bg-gray-100 transition-all duration-300 transform hover:scale-105 shadow-lg">
             Projelerimi Görüntüle
           </button>
-          <button className="px-8 py-4 border-2 border-white text-white font-bold rounded-full hover:bg-white hover:text-blue-600 transition-all duration-300 transform hover:scale-105">
+          <button className="px-6 py-3 md:px-8 md:py-4 border-2 border-white text-white font-bold rounded-full hover:bg-white hover:text-blue-600 transition-all duration-300 transform hover:scale-105">
             İletişime Geç
           </button>
         </div>
         
         {/* Social Links */}
-        <div className="flex justify-center gap-6">
+        <div className="flex justify-center gap-4 md:gap-6">
           {socialLinks.map((link) => (
             <a
               key={link.href}
@@ -80,7 +79,7 @@ const Hero = () => (
               target="_blank"
               rel="noopener noreferrer"
               aria-label={link.label}
-              className="p-3 bg-white/10 backdrop-blur-sm rounded-full hover:bg-white/20 transition-all duration-300 transform hover:scale-110"
+              className="p-2 md:p-3 bg-white/10 backdrop-blur-sm rounded-full hover:bg-white/20 transition-all duration-300 transform hover:scale-110"
             >
               {link.icon}
             </a>
@@ -90,9 +89,9 @@ const Hero = () => (
     </div>
     
     {/* Scroll Indicator */}
-    <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
-      <div className="w-6 h-10 border-2 border-white/50 rounded-full flex justify-center">
-        <div className="w-1 h-3 bg-white/50 rounded-full mt-2 animate-pulse"></div>
+    <div className="absolute bottom-6 left-1/2 transform -translate-x-1/2 animate-bounce">
+      <div className="w-5 h-8 border-2 border-white/50 rounded-full flex justify-center">
+        <div className="w-1 h-2 bg-white/50 rounded-full mt-2 animate-pulse"></div>
       </div>
     </div>
   </section>
