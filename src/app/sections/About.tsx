@@ -26,10 +26,10 @@ const About = () => (
           {/* Professional Description */}
           <div className="space-y-6 text-lg text-gray-700 dark:text-gray-300 leading-relaxed">
             <p>
-              Merhaba! Ben Alican Koçman, tutkulu bir Full Stack Developer'ım. Modern web teknolojileri ile kullanıcı dostu ve performanslı uygulamalar geliştirmeyi seviyorum.
+              Merhaba! Ben Alican Koçman, tutkulu bir Full Stack Developer&apos;ım. Modern web teknolojileri ile kullanıcı dostu ve performanslı uygulamalar geliştirmeyi seviyorum.
             </p>
             <p>
-              Doruksistem AS'de Full Stack Developer olarak çalışıyorum. React, Next.js, TypeScript ve Node.js gibi modern teknolojilerle hem frontend hem backend geliştirme yapıyorum.
+              Doruksistem AS&apos;de Full Stack Developer olarak çalışıyorum. React, Next.js, TypeScript ve Node.js gibi modern teknolojilerle hem frontend hem backend geliştirme yapıyorum.
             </p>
             <p>
               Sürekli öğrenmeye odaklanıyorum ve yeni teknolojileri hızlıca adapte edebiliyorum. Takım çalışmasına değer veriyor ve her projede en yüksek kaliteyi hedefliyorum.

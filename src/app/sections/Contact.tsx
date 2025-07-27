@@ -1,5 +1,5 @@
 "use client"
-import React, { useState } from "react";
+import React from "react";
 import { Mail, Linkedin, Github, MapPin, Send, ArrowRight, Phone } from "lucide-react";
 
 const contactInfo = [
@@ -30,40 +30,6 @@ const contactInfo = [
 ];
 
 const Contact = () => {
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    subject: "",
-    message: ""
-  });
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [submitStatus, setSubmitStatus] = useState<"idle" | "success" | "error">("idle");
-
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    const { name, value } = e.target;
-    setFormData(prev => ({
-      ...prev,
-      [name]: value
-    }));
-  };
-
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setIsSubmitting(true);
-    setSubmitStatus("idle");
-
-    try {
-      // Burada form verilerini işleyebilirsiniz (email servisi, API, vb.)
-      // Şimdilik sadece simüle ediyoruz
-      await new Promise(resolve => setTimeout(resolve, 1500));
-      setSubmitStatus("success");
-      setFormData({ name: "", email: "", subject: "", message: "" });
-    } catch {
-      setSubmitStatus("error");
-    } finally {
-      setIsSubmitting(false);
-    }
-  };
 
   return (
     <section id="contact" className="section-light py-12 lg:py-20">
